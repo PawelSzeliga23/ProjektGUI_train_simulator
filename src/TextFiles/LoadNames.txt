@@ -1,0 +1,20 @@
+Coal
+Iron ore
+Grain
+Lignite
+Cement
+Lime
+Fertilizer
+Wood
+Steel
+Clay
+Coke
+Rock crystal
+Quartz
+Gypsum
+Gravel
+Sand
+Peat
+Metallurgical raw materials
+Chemical raw materials
+Construction raw materials
