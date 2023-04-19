@@ -226,7 +226,7 @@ public class Train extends Thread {
 
     private synchronized String wagonsToString() {
         if (Wagons.isEmpty()) {
-            return "null";
+            return "";
         } else {
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.append("Wagons:");

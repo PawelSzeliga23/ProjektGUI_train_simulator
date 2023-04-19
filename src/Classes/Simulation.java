@@ -146,6 +146,7 @@ public class Simulation {
                                             foundTarget = true;
                                             train.getLocomotive().setSourceStation(begin);
                                             train.getLocomotive().setTargetStation(target);
+                                            train.setPath(Dijkstra.calculatePath(begin,target));
                                             System.out.println("You have successfully set begin and target Station");
                                         }
                                     }
@@ -274,7 +275,6 @@ public class Simulation {
                 System.out.println("Train does not have a start or end station, this train has not started");
             } else {
                 entry.start();
-                dontStartedTrainList.remove(entry);
             }
         });
     }
