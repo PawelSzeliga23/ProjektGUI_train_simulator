@@ -99,6 +99,7 @@ public class Simulation {
     public void addWagon(int locomotiveId, int wagonId) {
         boolean foundLocomotive = false;
         boolean foundWagon = false;
+        Wagon wagonRemoval = new BasicLoadWagon(0,0,null,0);
         if (!trainList.isEmpty()) {
             if (!wagonList.isEmpty()) {
                 for (Train train : trainList) {
@@ -109,13 +110,16 @@ public class Simulation {
                                 foundWagon = true;
                                 try {
                                     train.addWagon(wagon);
+                                    wagonRemoval = wagon;
                                     System.out.println("You have successfully connected wagon");
-                                    wagonList.remove(wagon);
                                 } catch (MaxNumberOfWagonException | MaxWeightException |
                                          MaxElectricalConnectionException e) {
                                     System.out.println(e);
                                 }
                             }
+                        }
+                        if (foundWagon){
+                            wagonList.remove(wagonRemoval);
                         }
                     }
                 }
